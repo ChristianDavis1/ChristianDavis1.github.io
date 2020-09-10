@@ -1,0 +1,39 @@
+ td{
+            text-align:center;
+        }
+
+        li{
+            color:#e369ff;
+        }
+         
+        p{
+            color:#ff52c5;
+        }
+
+        h4{
+            color:#f9e0ff
+        }
+
+        h1{
+            color:#f9e0ff
+        }
+
+        body{
+            background-color:#242222
+        }
+
+          td{
+            color:#f9e0ff
+        }
+
+        .toprow{
+            background-color:#bdbdbd
+        }
+
+        .evenrow{
+            background-color:#940060u
+        }
+
+        .oddrow{
+            background-color:#26525e
+        }
