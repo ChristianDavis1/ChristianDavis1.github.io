@@ -3,37 +3,50 @@
         }
 
         li{
-            color:#e369ff;
+            color:#ffffff;
         }
          
         p{
-            color:#ff52c5;
+            color:#ffffff;
         }
 
-        h4{
-            color:#f9e0ff
+        h2{
+            color:#ffffff
         }
 
         h1{
-            color:#f9e0ff
+            color:#ffffff
         }
 
         body{
-            background-color:#242222
+            background-color:#1a1919
         }
 
           td{
-            color:#f9e0ff
+            color:#ffffff
         }
 
         .toprow{
-            background-color:#bdbdbd
+            background-color:#ffffff
         }
 
         .evenrow{
-            background-color:#940060u
+            background-color:#ffffff
         }
 
         .oddrow{
-            background-color:#26525e
+            background-color:#ffffff
+        }
+
+         .h1{
+            color:#ffffff
+        }
+
+        .h2{
+            color:#ffffff
+        }
+
+        .mel{
+            float: left; 
+            padding: 16px;          
         }
