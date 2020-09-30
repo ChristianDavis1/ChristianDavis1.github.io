@@ -12,7 +12,36 @@
             top: 90px;
             bottom: 0px;
             background-color: red;
-     }
+        }
+
+        #left_pane{
+            background-color: green;
+            height: 100%;
+            width: 56%;
+            float: left;
+        }
+
+        #right_pane{
+            background-color: blue;
+            height: 100%;
+            width: 44%;
+            float: left;
+        }
+
+        #story_text{
+            background-color: yellow;
+            height: 80%;
+            width: 44%;
+            float: left;
+        }
+
+        #button_choices{
+            background-color: purple;
+            height: 100%;
+            width: 44%;
+            float: left;
+        }
+
     </style>
         
     <body>
@@ -33,8 +62,13 @@
                 </ul>
             </li>
         </ul>
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
+
+    <div id="container">
+        <div id="left_pane"></div>
+        <div id="right_pane"></div>
+            <div id="story_text"></div>
+            <div id="button_choices"></div>
+        </div>
 
     </body>
 </html>
