@@ -19,6 +19,9 @@
             height: 100%;
             width: 56%;
             float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #right_pane{
@@ -31,15 +34,37 @@
         #story_text{
             background-color: yellow;
             height: 80%;
-            width: 44%;
-            float: left;
+            color: purple;
+            font-weight: bold;
+    
         }
 
         #button_choices{
-            background-color: purple;
-            height: 100%;
-            width: 44%;
-            float: left;
+            background-color: pink;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #story_img{
+            max-height: 97%;
+            max-width: 97%;
+            width: auto;
+            height: auto;
+        }
+
+        .buttons{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 10px;
+            
+
         }
 
     </style>
@@ -64,11 +89,23 @@
         </ul>
 
     <div id="container">
-        <div id="left_pane"></div>
-        <div id="right_pane"></div>
-            <div id="story_text"></div>
-            <div id="button_choices"></div>
+        <div id="left_pane">
+            <img id="story_img" src="images/Sushii.jpg" />
         </div>
+        <div id="right_pane">
+            <div id="story_text">
+                <p>Welcome to the sushi place</p>
+                <p>It is very cool</p>
+                <p>do you like this place?</p>
+            </div>
+            <div id="button_choices">
+            
+                <a href="buttons">Yes</a>
+                <a href="buttons">No</a>
+
+            </div>
+        </div>
+    </div>
 
     </body>
 </html>
