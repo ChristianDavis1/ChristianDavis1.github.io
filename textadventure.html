@@ -1,111 +1,185 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Title</title>
-        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-    </head>
-    <style>
-        #container{
-            position:absolute;
-            left: 0px;
-            right: 0px;
-            top: 90px;
-            bottom: 0px;
-            background-color: red;
-        }
-
-        #left_pane{
-            background-color: green;
-            height: 100%;
-            width: 56%;
-            float: left;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #right_pane{
-            background-color: blue;
-            height: 100%;
-            width: 44%;
-            float: left;
-        }
-
-        #story_text{
-            background-color: yellow;
-            height: 80%;
-            color: purple;
-            font-weight: bold;
+        <title>Text Adventure</title>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+        
+       
     
-        }
+    <style>
+        #container {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 90px;
+                bottom: 0px;
+                background-color: #1a1919;
+            }
 
-        #button_choices{
-            background-color: pink;
-            height: 20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            #left_pane {
+                background-color: #1a1919;
+                height: 100%;
+                width: 56%;
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        }
+            #right_pane {
+                background-color: #1a1919;
+                height: 100%;
+                width: 44%;
+                float: right;
+            }
 
-        #story_img{
-            max-height: 97%;
-            max-width: 97%;
-            width: auto;
-            height: auto;
-        }
+            #story_text {
+                background-color: #1a1919;
+                height: 80%;
+                color: red;
+                font-weight: bold;
+            }
 
-        .buttons{
-            text-decoration: none;
-            color: white;
-            background-color: black;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 10px;
-            
+            #button_choices {
+                background-color: #1a1919;
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        }
+            #story_img {
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            .buttons {
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                margin: 10px;
+            }
 
     </style>
-        
+     </head>
     <body>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
+
+    <ul class="navbar">
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contactme.html">Contact Me</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="aboutme.html">About me</a></li>
             <li class="dropdown">
                 <a href="#">Projects</a>
                 <ul class="dropdown-content">
-                    <li><a href="textadventure.html">Textadventure</a></li>
-                    <li><a href="#">Project 2</a></li>
-                    <li><a href="#">Project 3</a></li>
-                    <li><a href="#">Project 4</a></li>
-                    <li><a href="#">Project 5</a></li>
-                
+                    <li><a href="textadventure.html">Text Adventure</a></li>
+                    <li><a href="#">Projects 2</a></li>
+                    <li><a href="#">Projects 3</a></li>
+                    <li><a href="#">Projects 4</a></li>
+                    <li><a href="#">Projects 5</a></li>
                 </ul>
             </li>
         </ul>
-
-    <div id="container">
+<div id="container">
         <div id="left_pane">
-            <img id="story_img" src="images/Sushii.jpg" />
+            <img id="story_img" src="images/babysloth.jpg"/>
+
+
         </div>
         <div id="right_pane">
             <div id="story_text">
-                <p>Welcome to the sushi place</p>
-                <p>It is very cool</p>
-                <p>do you like this place?</p>
+                <p id="p1">You wake up on an Island, there is nobody around.</p>
+                <p id="p2">You don't know what year it is, all you remember is your name...Joe.</p>
+                <p id="p3">All you hear is the ocean, do you go to the water or aventure inland?</p>
             </div>
             <div id="button_choices">
             
-                <a href="buttons">Yes</a>
-                <a href="buttons">No</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go Inland</a>
+                <a id="b2" class="buttons" href="#"onclick="bclick(2)">Go to the Ocean</a>
+                <a id="b3" class="buttons" href="#"onclick="bclick(3)">Yes</a>
+                <a id="b4" class="buttons" href="#"onclick="bclick(4)">no</a>
 
-            </div>
+            </div>        
         </div>
-    </div>
+    </div>      
 
+
+    <script>
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var b3 = document.getElementById("b3");
+        var b4 = document.getElementById("b4");
+        var img = document.getElementById("story_img");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var state = "intro";
+        intro();
+        
+        function intro(){
+            img.src = "images/Sushii.jpg";
+            b1.innerHTML = "Stay in School";
+            b2.innerHTML = "Go to camp";
+            b3.style.display = "none";
+            b4.style.display = "none";
+            p1.innerHTML = "Welcome to my Adventure. The year is 1975. Your name is John.";
+            p2.innerHTML = "Would you like to stay in school or go to camp?"
+            p3.innerHTML = "";
+        }
+
+        function stayInSchoo(){
+            img.src="images/bunny.jpg";
+            p1.innerHTML = "Begin training for powers";
+            p2.innerHTML = "Joe";
+            p3.innerHTML = "Mama";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "No";
+            b3.innerHTML = "Maybe"; 
+            b3.style.display = "block";
+        }
+        
+        function escape(){
+            img.src = "images/gmail.jpg";
+            b1.innerHTML = "Stay in School";
+            b2.innerHTML = "Go to camp";
+            b3.style.display = "none";
+            b4.style.display = "none";
+            p1.innerHTML = "Ooga Booga.";
+            p2.innerHTML = "Would you like to stay in school or go to camp?"
+            p3.innerHTML = "";
+            b3.style.display = "none";
+        }
+
+
+        //////State Machine
+        function bclick(button){
+            if (state == "intro"){
+                if(button == 1){
+                    stayInSchool();
+                    state="stayInSchool"
+                }
+            }
+            else if(button == 2){
+                goToCamp();
+                state="goToCamp";
+            }
+        }
+        else if(state =="stayInSchool"){
+            if button == 1){
+                escape();
+                state = "escape";
+            }
+            else if(button == 2){
+            intenseTraining();
+            state = "intenseTraining";
+            }
+        }
+
+    </script>
     </body>
 </html>
