@@ -99,10 +99,8 @@
             </div>
             <div id="button_choices">
             
-                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go Inland</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go to the Island</a>
                 <a id="b2" class="buttons" href="#"onclick="bclick(2)">Go to the Ocean</a>
-                <a id="b3" class="buttons" href="#"onclick="bclick(3)">Yes</a>
-                <a id="b4" class="buttons" href="#"onclick="bclick(4)">no</a>
 
             </div>        
         </div>
@@ -115,10 +113,8 @@
             </div>
             <div id="button_choices">
             
-                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go to Island</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Go to the Island</a>
                 <a id="b2" class="buttons" href="#"onclick="bclick(2)">Go to the Ocean</a>
-                <a id="b3" class="buttons" href="#"onclick="bclick(3)">Yes</a>
-                <a id="b4" class="buttons" href="#"onclick="bclick(4)">no</a>
 
             </div>        
         </div>
@@ -141,30 +137,48 @@
             img.src = "images/Island.jpg";
             b1.innerHTML = "Go to Island";
             b2.innerHTML = "Go to the Ocean";
-            b3.style.display = "none";
-            b4.style.display = "none";
             p1.innerHTML = "";
             p2.innerHTML = "";
             p3.innerHTML = "";
         }
 
-        function stayInSchoo(){
-            img.src="images/Island.jpg";
-            p1.innerHTML = "Begin training for powers";
-            p2.innerHTML = "Joe";
-            p3.innerHTML = "Mama";
+
+        theOcean();
+
+        function goToTheIsland(){
+            img.src ="images/Island.jpg";
+            p1.innerHTML = "You look to see if there is anything on the island";
+            p2.innerHTML = "But you are greeted by many snakes and run away";
+            p3.innerHTML = "Then you find a pinapple and cocaunt tree so you make a pina calada, now that you are fueled are you ready to go the the ocean?";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "None";
+            b3.style.display = "block";
+
+        function goToTheOcean(){
+            img.src ="images/Island.jpg";
+            p1.innerHTML = "Seek in the waters";
+            p2.innerHTML = "Swim Underwater";
+            p3.innerHTML = "Keep your distance";
             b1.innerHTML = "Yes";
             b2.innerHTML = "No";
-            b3.innerHTML = "Maybe"; 
             b3.style.display = "block";
         }
+        prepareToFight();
         
-        function escape(){
+        function prepareToFight(){
             img.src = "images/Island.jpg";
-            b1.innerHTML = "Stay in School";
-            b2.innerHTML = "Go to camp";
+            b1.innerHTML = "Take a shot at the leviithan";
+            b2.innerHTML = "Punch it in the face";
+            p1.innerHTML = "";
+            p2.innerHTML = "";
             b3.style.display = "none";
-            b4.style.display = "none";
+
+        theFight();
+
+        function theFight(){
+            img.src = "images/Island.jpg";
+            b1.innerHTML = "Aim and ready the bow";
+            b2.innerHTML = "Take a quick shot";
             p1.innerHTML = "";
             p2.innerHTML = "";
             p3.innerHTML = "";
@@ -176,19 +190,19 @@
         function bclick(button){
             if (state == "intro"){
                 if(button == 1){u
-                    stayInSchool();
-                    state="stayInSchool"
+                    goToTheIsland();
+                    state="GoToTheIsland"
                 }
             }
             else if(button == 2){
-                goToCamp();
-                state="goToCamp";
+                goToTheOcean();
+                state="goToTheOcean";
             }
         }
-        else if(state =="stayInSchool"){
+        else if(state =="goToTheIsland"){
             if button == 1){
-                escape();
-                state = "escape";
+                goToTheOcean();
+                state = "goToTheOcean";
             }
             else if(button == 2){
             intenseTraining();
